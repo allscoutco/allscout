@@ -485,8 +485,8 @@ nav.scrolled {
 /* ---- FOOTER ---- */
 footer { padding:64px 0 32px; border-top:1px solid var(--border); }
 .footer-grid {
-  display:grid; grid-template-columns:1.6fr repeat(3,1fr);
-  gap:48px; margin-bottom:48px;
+  display:grid; grid-template-columns:1.4fr repeat(4,1fr);
+  gap:40px; margin-bottom:48px;
 }
 .footer-brand p { font-size:14px; color:var(--text-muted); line-height:1.7; margin-top:14px; max-width:230px; }
 .footer-col h4 {
@@ -496,6 +496,8 @@ footer { padding:64px 0 32px; border-top:1px solid var(--border); }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:11px; }
 .footer-col ul a { font-size:14px; color:var(--text-muted); transition:color .2s; }
 .footer-col ul a:hover { color:var(--text); }
+.footer-addresses li { font-size:13px; color:var(--text-muted); line-height:1.7; }
+.footer-addresses li strong { color:var(--text); font-size:13px; }
 .footer-bottom {
   display:flex; justify-content:space-between; align-items:center;
   padding-top:28px; border-top:1px solid var(--border);
@@ -639,6 +641,7 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
 
 /* ---- CONTACT PAGE ---- */
 .contact-section { padding:80px 0 120px; background:var(--lt); }
+.contact-form-centered { max-width:680px; margin:0 auto; }
 .contact-grid { display:grid; grid-template-columns:1fr 1.7fr; gap:80px; align-items:start; }
 .contact-info h2 { font-size:clamp(22px,3vw,32px); font-weight:700; line-height:1.15; margin-bottom:12px; color:var(--lt-text); }
 .contact-info > p { font-size:16px; color:var(--lt-muted); line-height:1.75; margin-bottom:40px; }
