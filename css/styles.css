@@ -537,7 +537,13 @@ footer { padding:64px 0 32px; border-top:1px solid var(--border); }
 
 .about-team { padding:100px 0; background:var(--lt); }
 .team-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:24px; margin-top:60px; }
-.team-card { text-align:center; }
+.team-card {
+  text-align:center; text-decoration:none; display:block;
+  padding:20px 12px; border-radius:var(--r);
+  border:1px solid transparent;
+  transition: border-color .25s, transform .25s;
+}
+a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); cursor:pointer; }
 .team-avatar {
   width:80px; height:80px; border-radius:50%;
   background:var(--gradient);
