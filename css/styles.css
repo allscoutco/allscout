@@ -195,7 +195,7 @@ nav.scrolled {
   -webkit-text-fill-color: #ffffff;
 }
 #typeTarget {
-  display: inline-block;
+  display: inline;
 }
 .hero-sub {
   font-size:clamp(16px,1.8vw,18px);
