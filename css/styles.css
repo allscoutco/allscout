@@ -197,6 +197,17 @@ nav.scrolled {
 #typeTarget {
   display: inline;
 }
+#typeTarget::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 0.75em;
+  background: var(--purple);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 2px;
+  animation: blink 1s step-end infinite;
+}
 .hero-sub {
   font-size:clamp(16px,1.8vw,18px);
   color:var(--text-muted); line-height:1.75; margin-bottom:40px; max-width:480px;
@@ -669,17 +680,7 @@ a.team-card:hover { border-color:var(--lt-border); transform:translateY(-4px); c
   .form-row-2 { grid-template-columns:1fr; }
 }
 
-/* ---- TYPEWRITER CURSOR ---- */
-.type-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.78em;
-  background: var(--purple);
-  margin-left: 4px;
-  vertical-align: middle;
-  border-radius: 2px;
-  animation: blink 1s step-end infinite;
-}
+/* ---- TYPEWRITER CURSOR (via ::after on #typeTarget) ---- */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
