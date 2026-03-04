@@ -187,8 +187,9 @@ nav.scrolled {
 }
 .type-line {
   display: block;
-  min-height: 1.2em;
+  min-height: 2.4em;
   width: 100%;
+  overflow: hidden;
 }
 .ellipsis {
   color: #ffffff;
