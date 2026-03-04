@@ -2,7 +2,7 @@
 const phrases = [
   'my package arrives.',
   'my kid gets home.',
-  'someone parks in my space.',
+  'a car parks in my spot.',
 ];
 let pIdx = 0, cIdx = 0, deleting = false;
 
