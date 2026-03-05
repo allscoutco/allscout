@@ -340,6 +340,14 @@ nav.scrolled {
 }
 .prompt-chip-icon { font-size:16px; }
 
+.business-layout {
+  align-items: start;
+  margin-top: 40px;
+}
+.business-layout .agent-phone {
+  align-self: start;
+}
+
 @media (max-width:860px) {
   .agent-layout { grid-template-columns:1fr; }
   .agent-phone { display:none; }
