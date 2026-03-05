@@ -535,9 +535,86 @@ footer { padding:64px 0 32px; border-top:1px solid var(--border); }
 .about-split { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
 .about-split h2 { font-size:clamp(26px,3.5vw,40px); font-weight:700; line-height:1.15; margin-bottom:16px; color:var(--lt-text); }
 .about-split p { font-size:16px; color:var(--lt-muted); line-height:1.8; margin-bottom:14px; }
-.about-visual {
-  border-radius:var(--r-xl);
-  overflow:hidden;
+.about-visual { border-radius:var(--r-xl); }
+
+/* ── Camera dashboard frame ── */
+.cam-frame {
+  background: #0e0e1a;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(91,76,255,0.12);
+  overflow: hidden;
+}
+.cam-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #161624;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.cam-titlebar-left { display:flex; align-items:center; gap:6px; }
+.cam-dot {
+  width: 11px; height: 11px;
+  border-radius: 50%;
+}
+.cam-dot.red    { background: #ff5f57; }
+.cam-dot.yellow { background: #febc2e; }
+.cam-dot.green  { background: #28c840; }
+.cam-titlebar-center {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.02em;
+}
+.cam-live {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600;
+  color: #ff4d4d;
+  letter-spacing: 0.08em;
+}
+.cam-live-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #ff4d4d;
+  animation: livepulse 1.6s ease-in-out infinite;
+}
+@keyframes livepulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.cam-video-wrap {
+  position: relative;
+  line-height: 0;
+}
+.cam-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cam-detection-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(10,10,24,0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(38,185,249,0.3);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+  animation: badgepop 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
+  animation-delay: 0.5s;
+}
+@keyframes badgepop {
+  from { opacity:0; transform:translateY(6px) scale(0.95); }
+  to   { opacity:1; transform:translateY(0) scale(1); }
 }
 @media (max-width:768px) { .about-split { grid-template-columns:1fr; gap:40px; } }
 
