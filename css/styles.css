@@ -458,10 +458,10 @@ nav.scrolled {
 .alerts-section { padding:120px 0; background:var(--bg); }
 .alerts-layout {
   display:grid; grid-template-columns:1fr 1fr;
-  gap:72px; align-items:center;
+  gap:72px; align-items:flex-start; margin-top:40px;
 }
 .alerts-chips {
-  display:flex; flex-direction:column; gap:14px; margin-top:36px;
+  display:flex; flex-direction:column; gap:14px;
 }
 .alert-chip {
   display:flex; align-items:center; gap:16px;
