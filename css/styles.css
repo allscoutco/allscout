@@ -290,9 +290,16 @@ nav.scrolled {
 }
 .logos-row {
   display:flex; justify-content:center; align-items:center;
-  gap:44px; flex-wrap:wrap; opacity:0.45;
+  gap:48px; flex-wrap:wrap; opacity:0.5;
 }
-.logo-pill { font-size:17px; font-weight:700; letter-spacing:0.5px; color:var(--text); }
+.logo-pill {
+  display:flex; flex-direction:column; align-items:center; gap:7px;
+  font-size:12px; font-weight:600; letter-spacing:0.5px; color:var(--text);
+}
+.logo-pill img {
+  height:26px; width:auto; max-width:110px; object-fit:contain;
+  filter: brightness(100);
+}
 
 /* ---- AGENT FEATURE (HERO-LIKE PROMO) ---- */
 .agent-section {
@@ -529,10 +536,8 @@ footer { padding:64px 0 32px; border-top:1px solid var(--border); }
 .about-split h2 { font-size:clamp(26px,3.5vw,40px); font-weight:700; line-height:1.15; margin-bottom:16px; color:var(--lt-text); }
 .about-split p { font-size:16px; color:var(--lt-muted); line-height:1.8; margin-bottom:14px; }
 .about-visual {
-  background:linear-gradient(135deg,rgba(38,185,249,0.08),rgba(91,76,255,0.13));
-  border:1px solid rgba(91,76,255,0.18);
-  border-radius:var(--r-xl); aspect-ratio:1;
-  display:flex; align-items:center; justify-content:center; font-size:72px;
+  border-radius:var(--r-xl);
+  overflow:hidden;
 }
 @media (max-width:768px) { .about-split { grid-template-columns:1fr; gap:40px; } }
 

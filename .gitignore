@@ -1,0 +1,22 @@
+# Large video files (>50MB — exceeds GitHub limits)
+assets/Raw Videos/ScoutX inc PoolScout.mp4
+assets/Raw Videos/Robot and Skimmer Robot Mapping.mp4
+assets/Raw Videos/ScoutX Bather Load - Person Water Hours.mp4
+assets/Raw Videos/GunScout2.mp4
+assets/Raw Videos/PackageScout3.mp4
+assets/Raw Videos/ParkScout 3.mp4
+assets/Raw Videos/GunScout 1.mp4
+assets/Raw Videos/GunScout background.mp4
+assets/Raw Videos/ParkScoutEV Fire and Smoke.mp4
+assets/Raw Videos/ParkScoutEV Fire and Smoke 3.mp4
+assets/Raw Videos/PoopScout.mp4
+assets/Raw Videos/PoopScout 2.mp4
+
+# Build outputs
+AllScout-30sec-v1.mp4
+build-video.sh
+AllScout-Video-Production-Brief.md
+
+# System
+.DS_Store
+assets/.DS_Store
