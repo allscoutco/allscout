@@ -310,25 +310,8 @@ nav.scrolled {
   gap:72px; align-items:center;
 }
 .agent-phone {
-  width:280px; margin:0 auto;
-  background:#f5f5fc;
-  border-radius:44px;
-  border:2px solid rgba(0,0,0,0.08);
-  box-shadow:0 40px 100px rgba(0,0,0,0.55);
-  overflow:hidden;
-  position:relative;
-}
-.agent-phone::before {
-  content:'';
-  display:block; width:90px; height:28px;
-  background:#000; border-radius:0 0 16px 16px;
-  margin:0 auto;
-}
-.agent-phone img { width:100%; display:block; margin-top:-28px; }
-.agent-phone-placeholder {
-  background:#f5f5fc; min-height:480px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:13px; color:#666; text-align:center; padding:20px;
+  display: flex;
+  justify-content: center;
 }
 
 .agent-text .hero-badge { display:inline-flex; }
