@@ -198,7 +198,18 @@
           <div class="phone-frame">
             <div class="phone-island"><div class="phone-island-dot"></div></div>
             <div class="phone-screen">
-              <img src="assets/New%20alert%20settings.jpeg" alt="AllScout alerts screen" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <video id="hiwVideo" src="assets/Raw%20Videos/PackageScout3.mp4#t=30" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+              <script>
+                (function(){
+                  var v = document.getElementById('hiwVideo');
+                  var s = 30, e = 52;
+                  function seekToStart() { if (v.currentTime < s) v.currentTime = s; }
+                  v.addEventListener('loadedmetadata', function(){ v.currentTime = s; });
+                  v.addEventListener('canplay', seekToStart);
+                  v.addEventListener('playing', seekToStart);
+                  v.addEventListener('timeupdate', function(){ if (v.currentTime >= e || v.currentTime < s) v.currentTime = s; });
+                })();
+              </script>
             </div>
           </div>
         </div>
