@@ -302,6 +302,107 @@ nav.scrolled {
   filter: brightness(100);
 }
 
+/* ---- RING SECTION ---- */
+.ring-section {
+  padding: 100px 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ring-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.ring-header h2 {
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+.ring-header p {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+.ring-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.ring-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.ring-flow-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+.ring-flow-card {
+  border-radius: 20px;
+  border: 1px solid var(--border-2);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring-logo-card {
+  width: 160px;
+  height: 120px;
+  padding: 28px;
+}
+.ring-logo-card img {
+  width: 100%;
+  height: auto;
+  filter: brightness(100);
+  opacity: 0.9;
+}
+.ring-screen-card {
+  width: 200px;
+  height: 160px;
+}
+.ring-screen-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ring-alert-card {
+  width: 160px;
+  height: 220px;
+}
+.ring-alert-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.ring-flow-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: -28px; /* nudge up past the label */
+}
+@media (max-width: 640px) {
+  .ring-section { padding: 70px 0; }
+  .ring-header { margin-bottom: 40px; }
+  .ring-flow-arrow { transform: rotate(90deg); margin: 0; }
+  .ring-flow { flex-direction: column; }
+  .ring-logo-card { width: 140px; height: 100px; }
+  .ring-screen-card { width: 180px; height: 140px; }
+  .ring-alert-card { width: 140px; height: 190px; }
+}
+
 /* ---- AGENT FEATURE (HERO-LIKE PROMO) ---- */
 .agent-section {
   padding:120px 0; background:var(--bg-2);
