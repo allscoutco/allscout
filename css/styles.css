@@ -393,7 +393,7 @@ nav.scrolled {
 .hiw-step p  { font-size: 15px; color: var(--lt-muted); line-height: 1.7; }
 
 /* ── Phone mockup ── */
-.hiw-phone-wrap { display: flex; justify-content: center; }
+.hiw-phone-wrap { display: flex; justify-content: center; max-width: 320px; margin: 0 auto; }
 .phone-frame {
   width: 250px;
   background: #0e0e18;
