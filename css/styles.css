@@ -304,29 +304,46 @@ nav.scrolled {
 
 /* ---- RING SECTION ---- */
 .ring-section {
-  padding: 100px 0;
+  padding: 80px 0;
   background: var(--lt);
   border-top: 1px solid var(--lt-border);
   border-bottom: 1px solid var(--lt-border);
 }
-.ring-header {
-  text-align: center;
-  margin-bottom: 0;
+.ring-split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
 }
-.ring-header h2 {
-  font-size: clamp(26px, 3.5vw, 44px);
+.ring-text h2 {
+  font-size: clamp(26px, 3.2vw, 42px);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.5px;
   margin-bottom: 14px;
   color: var(--lt-text);
 }
-.ring-header p {
+.ring-text p {
   font-size: 17px;
   color: var(--lt-muted);
   max-width: 480px;
-  margin: 0 auto;
   line-height: 1.75;
+}
+.ring-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+.ring-logo-wrap img {
+  height: 52px;
+  width: auto;
+  filter: invert(1) brightness(0.2);
+}
+@media (max-width: 640px) {
+  .ring-split { grid-template-columns: 1fr; gap: 32px; }
+  .ring-logo-wrap { justify-content: flex-start; }
+  .ring-section { padding: 60px 0; }
 }
 .ring-flow {
   display: flex;
