@@ -615,7 +615,7 @@ nav.scrolled {
 }
 .alert-box h3 { font-size:16px; font-weight:700; color:var(--text); margin-bottom:8px; }
 .alert-box p { font-size:14px; color:var(--text-muted); line-height:1.6; margin:0; }
-.alert-box-btn { margin-top:20px; font-size:13px; padding:9px 18px; align-self:flex-start; }
+.alert-box-btn { margin-top:auto; padding-top:20px; align-self:flex-end; font-size:13px; padding:9px 20px; }
 
 .alert-chip {
   display:flex; align-items:center; gap:16px;
