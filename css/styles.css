@@ -595,7 +595,7 @@ nav.scrolled {
 .badge-custom { background:rgba(255,255,255,0.06); color:var(--text-muted); border:1px solid var(--border); }
 
 .alerts-phone {
-  width:280px; margin:0 auto;
+  width:280px; height:520px; margin:0 auto;
   align-self: start;
   background:#1a1a2a;
   border-radius:44px;
@@ -607,7 +607,7 @@ nav.scrolled {
   content:''; display:block; width:90px; height:28px;
   background:#000; border-radius:0 0 16px 16px; margin:0 auto;
 }
-.alerts-phone img { width:100%; display:block; margin-top:-28px; }
+.alerts-phone img { width:100%; height:calc(100% + 28px); display:block; margin-top:-28px; object-fit:cover; object-position:top; }
 .alerts-phone-placeholder {
   background:#f5f5fc; min-height:480px;
   display:flex; align-items:center; justify-content:center;
