@@ -597,6 +597,13 @@ nav.scrolled {
 
 /* ---- ALERTS SHOWCASE (dark) ---- */
 .alerts-section { padding:120px 0; background:var(--bg); }
+.alerts-layout {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:72px; align-items:start; margin-top:40px;
+}
+.alerts-chips {
+  display:flex; flex-direction:column; gap:14px;
+}
 .alerts-grid {
   display:grid; grid-template-columns:repeat(3,1fr);
   gap:20px; margin-top:48px;
@@ -668,6 +675,8 @@ nav.scrolled {
 }
 
 @media (max-width:860px) {
+  .alerts-layout { grid-template-columns:1fr; }
+  .alerts-phone { display:none; }
   .alerts-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:540px) {
