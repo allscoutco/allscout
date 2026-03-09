@@ -648,6 +648,7 @@ nav.scrolled {
 }
 .alerts-chips {
   display:flex; flex-direction:column; gap:14px;
+  margin-bottom:22px;
 }
 .alerts-grid {
   display:grid; grid-template-columns:repeat(3,1fr);
