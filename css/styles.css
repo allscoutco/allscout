@@ -615,7 +615,6 @@ nav.scrolled {
 }
 @media (max-width:768px) {
   .hiw-layout { grid-template-columns: 1fr; gap: 60px; }
-  .hiw-phone-wrap { order: -1; }
 }
 
 /* ---- FEATURES (light) ---- */
