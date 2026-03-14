@@ -36,181 +36,222 @@
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
     }
-    .account-header img { height: 26px; width: auto; }
+    .account-header img { height: 28px; width: auto; }
 
     /* ---- MAIN ---- */
     .account-main {
       flex: 1;
-      max-width: 480px;
+      max-width: 560px;
       width: 100%;
       margin: 0 auto;
-      padding: 32px 20px 80px;
+      padding: 48px 24px 80px;
     }
 
-    /* ---- HERO CARD ---- */
-    .plan-hero {
-      background: linear-gradient(135deg, #4338f5 0%, #26B9F9 100%);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .plan-hero::before {
-      content: '';
-      position: absolute;
-      top: -40px; right: -40px;
-      width: 200px; height: 200px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 50%;
-    }
-    .plan-hero::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; right: 40px;
-      width: 160px; height: 160px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 50%;
-    }
-    .plan-hero-label {
-      font-size: 12px;
-      font-weight: 500;
-      opacity: 0.8;
-      margin-bottom: 4px;
-      letter-spacing: 0.03em;
-    }
-    .plan-hero-name {
-      font-size: 18px;
+    .account-title {
+      font-size: 26px;
       font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .plan-hero-body {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
-    .plan-hero-credits {
-      font-size: 52px;
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -2px;
-    }
-    .plan-hero-usage {
-      text-align: right;
-      font-size: 12px;
-      opacity: 0.8;
-    }
-    .plan-hero-usage strong {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-    .plan-hero-footer {
-      margin-top: 16px;
-      font-size: 12px;
-      opacity: 0.75;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: -0.4px;
+      margin-bottom: 32px;
     }
 
-    /* ---- SECTION TITLE ---- */
-    .section-title {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      margin-top: 28px;
-    }
-
-    /* ---- PLAN LIST ---- */
-    .plans-list {
+    /* ---- CARD ---- */
+    .account-card {
       background: var(--bg-card);
       border: 1px solid var(--border-2);
       border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .account-card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .account-card.gradient {
+      background: linear-gradient(135deg, #4338f5 0%, #26B9F9 100%);
+      border: none;
+      position: relative;
       overflow: hidden;
     }
+    .account-card.gradient::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .account-card.gradient .account-card-label {
+      color: rgba(255,255,255,0.75);
+    }
+    .account-card.gradient .card-divider {
+      border-color: rgba(255,255,255,0.2);
+    }
+    .account-card.gradient .plan-info p,
+    .account-card.gradient .credits-label {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Profile */
+    .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .profile-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #26B9F9, #5B4CFF);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: #fff;
+      flex-shrink: 0;
+    }
+    .profile-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .profile-email {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Plan */
     .plan-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--text);
-      transition: background 0.15s;
-    }
-    .plan-row:last-child { border-bottom: none; }
-    .plan-row:hover:not(.current) { background: rgba(255,255,255,0.03); }
-    .plan-row.current { cursor: default; }
-    .plan-row-left h4 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
-    .plan-row-left p { font-size: 12px; color: var(--text-muted); }
-    .plan-row-right {
-      display: flex;
-      align-items: center;
       gap: 12px;
     }
-    .plan-price {
-      font-size: 15px;
-      font-weight: 700;
-      white-space: nowrap;
+    .plan-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
     }
-    .plan-price span {
+    .plan-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .plan-badge {
       font-size: 12px;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-    .current-badge {
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 10px;
+      font-weight: 600;
+      padding: 4px 12px;
       border-radius: 100px;
-      background: var(--purple);
+      background: rgba(255,255,255,0.2);
       color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
       white-space: nowrap;
-    }
-    .plan-arrow {
-      color: var(--text-muted);
-      font-size: 16px;
     }
 
-    /* ---- TOP UP ---- */
-    .topup-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-2);
-      border-radius: 16px;
-      padding: 18px;
+    /* Credits */
+    .credits-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+    .credits-number {
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #fff;
+    }
+    .credits-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Divider */
+    .card-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--gradient);
+      color: #fff;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-2);
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.3); }
+    .btn + .btn { margin-top: 10px; }
+
+    /* ---- UPGRADE OPTIONS ---- */
+    .upgrade-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .upgrade-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-2);
+      background: var(--bg-card);
+      cursor: pointer;
       text-decoration: none;
       color: var(--text);
       transition: border-color 0.15s;
     }
-    .topup-card:hover { border-color: rgba(38,185,249,0.4); }
-    .topup-card-left h4 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
-    .topup-card-left p { font-size: 12px; color: var(--text-muted); }
-    .topup-price {
+    .upgrade-option:hover { border-color: rgba(91,76,255,0.5); }
+    .upgrade-option.recommended { border-color: rgba(91,76,255,0.4); background: rgba(91,76,255,0.06); }
+    .upgrade-option-info h4 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .upgrade-option-info p { font-size: 12px; color: var(--text-muted); }
+    .upgrade-option-price {
       font-size: 15px;
       font-weight: 700;
-      color: var(--cyan);
       white-space: nowrap;
     }
-
-    /* ---- CHART ---- */
-    .chart-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-2);
-      border-radius: 16px;
-      padding: 20px;
+    .upgrade-option-price span {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
     }
-    .chart-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
-    canvas { width: 100% !important; }
+    .recommended-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(91,76,255,0.2);
+      color: #a99eff;
+      border: 1px solid rgba(91,76,255,0.3);
+      margin-left: 8px;
+      vertical-align: middle;
+    }
 
     @media (max-width: 480px) {
-      .account-main { padding: 24px 16px 60px; }
-      .plan-hero-credits { font-size: 44px; }
+      .account-main { padding: 32px 16px 60px; }
+      .account-title { font-size: 22px; }
     }
   </style>
 </head>
@@ -221,171 +262,105 @@
   </header>
 
   <main class="account-main">
+    <h1 class="account-title">My Account</h1>
 
-    <!-- Hero Plan Card -->
-    <div class="plan-hero">
-      <div class="plan-hero-label">My Plan</div>
-      <div class="plan-hero-name" id="heroPlanName">AllScout Basic — $2.99/mo</div>
-      <div class="plan-hero-body">
-        <div class="plan-hero-credits" id="heroPlanCredits">2,000</div>
-        <div class="plan-hero-usage">
-          Used this month
-          <strong id="heroUsage">1,880 / 2,000</strong>
+    <!-- Profile -->
+    <div class="account-card">
+      <div class="account-card-label">Profile</div>
+      <div class="profile-row">
+        <div class="profile-avatar" id="avatarInitials">JD</div>
+        <div>
+          <div class="profile-name" id="profileName">Jane Doe</div>
+          <div class="profile-email" id="profileEmail">jane@example.com</div>
         </div>
-      </div>
-      <div class="plan-hero-footer" id="heroFooter">
-        You'll be charged $2.99 for 2,000 credits next month
       </div>
     </div>
 
-    <!-- Credit Usage Chart -->
-    <div class="chart-card">
-      <h3>Credit Usage</h3>
-      <canvas id="usageChart" height="120"></canvas>
-    </div>
-
-    <!-- Plans -->
-    <div class="section-title">Plans</div>
-    <div class="plans-list">
-      <div class="plan-row current" id="rowBasic">
-        <div class="plan-row-left">
-          <h4>Basic</h4>
-          <p>2,000 credits/month</p>
+    <!-- Current Plan & Credits -->
+    <div class="account-card gradient">
+      <div class="account-card-label">Current Plan</div>
+      <div class="plan-row">
+        <div class="plan-info">
+          <h3 id="planName">AllScout Basic</h3>
+          <p>Renews monthly</p>
         </div>
-        <div class="plan-row-right">
-          <div class="plan-price">$2.99 <span>/month</span></div>
-          <span class="current-badge" id="badgeBasic">Current Plan</span>
+        <span class="plan-badge" id="planBadge">Basic</span>
+      </div>
+      <hr class="card-divider">
+      <div class="credits-row">
+        <div>
+          <div class="credits-number" id="creditsCount">1,840</div>
+          <div class="credits-label">credits remaining this month</div>
         </div>
       </div>
-      <a href="https://buy.stripe.com/5kQcN53oqbcOdW77Zh4wM01" class="plan-row" id="rowPro" target="_blank" rel="noopener">
-        <div class="plan-row-left">
-          <h4>Pro</h4>
-          <p>7,000 credits/month</p>
-        </div>
-        <div class="plan-row-right">
-          <div class="plan-price">$7.99 <span>/month</span></div>
-          <span class="plan-arrow">›</span>
-        </div>
-      </a>
-      <a href="https://buy.stripe.com/9B63cv4su94G19l1AT4wM02" class="plan-row" id="rowMax" target="_blank" rel="noopener">
-        <div class="plan-row-left">
-          <h4>Max</h4>
-          <p>15,000 credits/month</p>
-        </div>
-        <div class="plan-row-right">
-          <div class="plan-price">$13.99 <span>/month</span></div>
-          <span class="plan-arrow">›</span>
-        </div>
-      </a>
+    </div>
+
+    <!-- Upgrade Plan -->
+    <div class="account-card">
+      <div class="account-card-label">Upgrade Plan</div>
+      <div class="upgrade-grid">
+        <a href="#" class="upgrade-option recommended" id="upgradeProLink">
+          <div class="upgrade-option-info">
+            <h4>AllScout Pro <span class="recommended-badge">Recommended</span></h4>
+            <p>7,000 credits/month · Unlimited cameras</p>
+          </div>
+          <div class="upgrade-option-price">$7.99 <span>/mo</span></div>
+        </a>
+        <a href="#" class="upgrade-option" id="upgradeMaxLink">
+          <div class="upgrade-option-info">
+            <h4>AllScout Max</h4>
+            <p>15,000 credits/month · Unlimited cameras · Data Summary</p>
+          </div>
+          <div class="upgrade-option-price">$13.99 <span>/mo</span></div>
+        </a>
+      </div>
     </div>
 
     <!-- Top-up -->
-    <div class="section-title">One-time Top-up</div>
-    <a href="https://buy.stripe.com/5kQ4gz6AC1CecS37Zh4wM00" class="topup-card" target="_blank" rel="noopener">
-      <div class="topup-card-left">
-        <h4>1,000 credits</h4>
-        <p>Added instantly · never expires</p>
+    <div class="account-card">
+      <div class="account-card-label">One-time Top-up</div>
+      <div class="plan-row" style="margin-bottom:16px;">
+        <div class="plan-info">
+          <h3>1,000 credits</h3>
+          <p>Added instantly to your account</p>
+        </div>
+        <span class="plan-badge" style="background:rgba(38,185,249,0.1);color:#26B9F9;border-color:rgba(38,185,249,0.25);">One-time</span>
       </div>
-      <div class="topup-price">Buy now ›</div>
-    </a>
+      <a href="#" class="btn btn-outline" id="topupLink">Buy 1,000 credits →</a>
+    </div>
 
   </main>
 
   <script>
-    // ── Placeholder: replace with Zitadel token + API data ──
+    // ── Placeholder: replace with Zitadel token parsing ──
     const user = {
-      plan: 'basic',   // 'basic' | 'pro' | 'max'
-      creditsTotal: 2000,
-      creditsUsed: 1880,
-      usageData: [80, 200, 350, 420, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1750, 1880]
+      name: 'Jane Doe',
+      email: 'jane@example.com',
+      plan: 'basic',        // 'basic' | 'pro' | 'max'
+      credits: 1840
     };
 
-    const plans = {
-      basic: { label: 'AllScout Basic — $2.99/mo', price: '$2.99', footer: "You'll be charged $2.99 for 2,000 credits next month" },
-      pro:   { label: 'AllScout Pro — $7.99/mo',   price: '$7.99', footer: "You'll be charged $7.99 for 7,000 credits next month" },
-      max:   { label: 'AllScout Max — $13.99/mo',  price: '$13.99', footer: "You'll be charged $13.99 for 15,000 credits next month" }
-    };
+    const planLabels = { basic: 'AllScout Basic', pro: 'AllScout Pro', max: 'AllScout Max' };
+    const planBadgeLabels = { basic: 'Basic', pro: 'Pro', max: 'Max' };
 
-    const p = plans[user.plan];
-    document.getElementById('heroPlanName').textContent = p.label;
-    document.getElementById('heroPlanCredits').textContent = user.creditsTotal.toLocaleString();
-    document.getElementById('heroUsage').textContent = `${user.creditsUsed.toLocaleString()} / ${user.creditsTotal.toLocaleString()}`;
-    document.getElementById('heroFooter').textContent = p.footer;
+    document.getElementById('profileName').textContent = user.name;
+    document.getElementById('profileEmail').textContent = user.email;
+    document.getElementById('avatarInitials').textContent = user.name.split(' ').map(n => n[0]).join('').toUpperCase();
+    document.getElementById('planName').textContent = planLabels[user.plan];
+    document.getElementById('planBadge').textContent = planBadgeLabels[user.plan];
+    document.getElementById('creditsCount').textContent = user.credits.toLocaleString();
 
-    // Mark current plan row & hide upgrade options below current
-    ['basic','pro','max'].forEach(tier => {
-      const row = document.getElementById('row' + tier.charAt(0).toUpperCase() + tier.slice(1));
-      const badge = document.getElementById('badge' + tier.charAt(0).toUpperCase() + tier.slice(1));
-      if (tier === user.plan) {
-        row.classList.add('current');
-        if (badge) badge.style.display = 'inline-block';
-      } else {
-        if (badge) badge.style.display = 'none';
-        // hide lower plans
-        const order = ['basic','pro','max'];
-        if (order.indexOf(tier) < order.indexOf(user.plan)) row.style.display = 'none';
-      }
-    });
+    // ── Placeholder: replace with Stripe Payment Links ──
+    document.getElementById('upgradeProLink').href = 'https://buy.stripe.com/5kQcN53oqbcOdW77Zh4wM01';
+    document.getElementById('upgradeMaxLink').href = 'https://buy.stripe.com/9B63cv4su94G19l1AT4wM02';
+    document.getElementById('topupLink').href = 'https://buy.stripe.com/5kQ4gz6AC1CecS37Zh4wM00';
 
-    // ── Simple line chart ──
-    const canvas = document.getElementById('usageChart');
-    const ctx = canvas.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    const W = canvas.parentElement.clientWidth - 40;
-    const H = 120;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
-    ctx.scale(dpr, dpr);
-
-    const data = user.usageData;
-    const max = user.creditsTotal;
-    const pad = { top: 10, right: 10, bottom: 24, left: 30 };
-    const gW = W - pad.left - pad.right;
-    const gH = H - pad.top - pad.bottom;
-
-    // Grid lines
-    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
-    ctx.lineWidth = 1;
-    [0, 0.5, 1].forEach(t => {
-      const y = pad.top + gH * (1 - t);
-      ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + gW, y); ctx.stroke();
-      ctx.fillStyle = 'rgba(255,255,255,0.3)';
-      ctx.font = '10px Space Grotesk';
-      ctx.fillText(Math.round(max * t / 1000) + 'k', 0, y + 4);
-    });
-
-    // X labels
-    ctx.fillStyle = 'rgba(255,255,255,0.3)';
-    ctx.font = '10px Space Grotesk';
-    ctx.fillText('1', pad.left, H - 4);
-    ctx.fillText('15', pad.left + gW / 2 - 6, H - 4);
-    ctx.fillText('30', pad.left + gW - 12, H - 4);
-
-    const pts = data.map((v, i) => ({
-      x: pad.left + (i / (data.length - 1)) * gW,
-      y: pad.top + gH * (1 - v / max)
-    }));
-
-    // Fill
-    const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + gH);
-    grad.addColorStop(0, 'rgba(91,76,255,0.35)');
-    grad.addColorStop(1, 'rgba(91,76,255,0)');
-    ctx.beginPath();
-    ctx.moveTo(pts[0].x, pad.top + gH);
-    pts.forEach(p => ctx.lineTo(p.x, p.y));
-    ctx.lineTo(pts[pts.length-1].x, pad.top + gH);
-    ctx.closePath();
-    ctx.fillStyle = grad;
-    ctx.fill();
-
-    // Line
-    ctx.beginPath();
-    pts.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
-    ctx.strokeStyle = '#5B4CFF';
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    // Hide upgrade options already on or above current plan
+    if (user.plan === 'pro') document.getElementById('upgradeProLink').style.display = 'none';
+    if (user.plan === 'max') {
+      document.getElementById('upgradeProLink').style.display = 'none';
+      document.getElementById('upgradeMaxLink').style.display = 'none';
+    }
   </script>
 
 </body>
