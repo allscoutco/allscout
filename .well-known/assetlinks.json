@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.deep_innovations.scoutx",
+      "sha256_cert_fingerprints": [
+        "D2:A1:CD:F8:76:E5:50:B2:8B:40:1C:86:CD:6D:6A:75:C8:77:6B:27:BE:73:A3:D2:B0:89:2A:4B:FE:F1:F6:DC",
+        "8A:3E:32:A1:D1:F7:3B:B7:1C:22:AF:B9:9E:D5:A7:DD:82:DF:05:6C:DD:02:A0:67:6D:A1:FF:D8:47:DA:EE:FE"
+      ]
+    }
+  }
+]
