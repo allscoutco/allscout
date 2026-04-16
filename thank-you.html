@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — AllScout</title>
+  <meta name="description" content="Thank you for your purchase.">
+  <meta http-equiv="refresh" content="4;url=/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/AllScout favicon.png" type="image/png">
+  <style>
+    .thank-you-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .thank-you-content {
+      max-width: 560px;
+    }
+    .thank-you-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(91,76,255,0.15);
+      border: 1px solid rgba(91,76,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 24px;
+    }
+    .thank-you-content h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .thank-you-content p {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .redirect-note {
+      font-size: 14px;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/AllSccout white.svg" alt="AllScout">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary">Join Waitlist</a>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileMenu">
+    <button class="mobile-nav-close" onclick="closeMenu()" aria-label="Close menu">✕</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="pricing.html" onclick="closeMenu()">Pricing</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Get started</a>
+  </div>
+
+  <!-- THANK YOU -->
+  <section class="thank-you-section">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="thank-you-content fade-in">
+      <div class="thank-you-icon">✓</div>
+      <h1>Thank you for your <span class="gradient-text">purchase</span></h1>
+      <p>You will receive an email confirming the details shortly.</p>
+      <span class="redirect-note">Redirecting to allscout in a few seconds...</span>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script>
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 4000);
+  </script>
+</body>
+</html>
