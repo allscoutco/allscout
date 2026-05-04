@@ -3,11 +3,11 @@
     "details": [
       {
         "appIDs": [
-          "8LG9W9LVZ5.com.deep-innovations.scoutx.ios",
-          "8LG9W9LVZ5.com.deep-innovations.scoutx-dev.ios"
+          "8LG9W9LVZ5.com.deep-innovations.scoutx.ios"
         ],
-        "components": [
-          { "/": "/*" }
+        "paths": [
+          "/app",
+          "/app/*"
         ]
       }
     ]
